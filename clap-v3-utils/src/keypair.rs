@@ -19,8 +19,9 @@ use {
     clap::ArgMatches,
     rpassword::prompt_password,
     solana_remote_wallet::{
+        errors::RemoteWalletError,
         remote_keypair::generate_remote_keypair,
-        remote_wallet::{maybe_wallet_manager, RemoteWalletError, RemoteWalletManager},
+        remote_wallet::{maybe_wallet_manager, RemoteWalletManager},
     },
     solana_sdk::{
         derivation_path::DerivationPath,
